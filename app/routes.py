@@ -2,7 +2,7 @@ from app import app
 from app.models import User
 
 from flask import render_template, flash, redirect, url_for
-from flask_login import login_user, current_user
+from flask_login import login_user, current_user, logout_user
 
 from app.forms import LoginForm
 
@@ -41,3 +41,8 @@ def login():
         login_user(user, remenber=form.remember_me.data)
         return redirect(url_for('index'))
     return render_template('login.html',title='Sing In', form=form)
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
