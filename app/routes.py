@@ -7,4 +7,4 @@ from flask import render_template
 def index():
     user = {'username':'Gabriel'}
     
-    return render_template('index.html', title = 'Home Page', user=user)
+    return render_template('index.html', user=user)
