@@ -42,7 +42,7 @@ class UserModelCase(unittest.TestCase):
         self.assertEqual(u2.followers.count(), 1)
         self.assertEqual(u2.followers.first().username, 'john')
         
-        u1.unfllow(u2)
+        u1.unfollow(u2)
         self.assertFalse(u1.is_following(u2))
         self.assertEqual(u1.followed.count(),0)
         self.assertEqual(u2.followers.count(),0)
