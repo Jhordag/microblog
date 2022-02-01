@@ -102,3 +102,35 @@ Traceback (most recent call last):
   File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2435, in _generate_backref
     raise sa_exc.ArgumentError(
 sqlalchemy.exc.ArgumentError: Error creating backref 'followers' on relationship 'User.followers': property of that name exists on mapper 'mapped class User->user'
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
