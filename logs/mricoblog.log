@@ -76,3 +76,35 @@ Traceback (most recent call last):
 smtplib.SMTPSenderRefused: (530, b'5.7.0 Must issue a STARTTLS command first. l20sm2891oab.12 - gsmtp', 'email@email.com')
 Microblog startup
 Microblog startup
+Microblog startup
+Microblog startup
+Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 38, in index
+    return render_template('index.html', title = 'Home', posts=posts.items, form=form,
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\templating.py", line 128, in _render
+    rv = template.render(context)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\gabri\Desktop\Microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\gabri\Desktop\Microblog\app\templates\base.html", line 4, in template
+    {% if title%}{{ tilte} - Microblog }
+jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+Microblog startup
