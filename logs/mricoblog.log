@@ -39,3 +39,33 @@ Microblog startup
 Microblog startup
 Microblog startup
 Microblog startup
+Microblog startup
+Microblog startup
+Microblog startup
+Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 19, in index
+    post = Post(body=form.post.data, athor=current_user)
+  File "<string>", line 4, in __init__
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 480, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 207, in raise_
+    raise exception
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 477, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1154, in _declarative_constructor
+    raise TypeError(
+TypeError: 'athor' is an invalid keyword argument for Post
+Microblog startup
