@@ -108,3 +108,5 @@ Traceback (most recent call last):
     {% if title%}{{ tilte} - Microblog }
 jinja2.exceptions.TemplateSyntaxError: unexpected '}'
 Microblog startup
+Microblog startup
+Microblog startup
