@@ -91,3 +91,23 @@ Traceback (most recent call last):
   File "C:\Users\gabri\Desktop\Microblog\app\templates\user.html", line 42, in template
     {% endblock %}
 jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endif'. The innermost block that needs to be closed is 'if'.
+Microblog startup
+Exception on /follow/gabrieljhordane [POST]
+Traceback (most recent call last):
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 120, in follow
+    current_user.follow(username)
+  File "C:\Users\gabri\Desktop\Microblog\app\models.py", line 45, in follow
+    if not self.is_following(user):
+  File "C:\Users\gabri\Desktop\Microblog\app\models.py", line 53, in is_following
+    return self.followed.filter(followers.c.followed_id== user.id).count() >0
+AttributeError: 'str' object has no attribute 'id'
