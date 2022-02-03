@@ -1,5 +1,7 @@
 from flask import Flask
 from config import Config
+from flask import request
+
 
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -7,6 +9,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask_babel import Babel, lazy_gettext as _l
 
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
@@ -19,10 +22,10 @@ app.config.from_object(Config)
 
 login = LoginManager(app)
 login.login_view = 'login'
+login.login_message = _l('Please log in to access this page.')
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
@@ -60,4 +63,12 @@ bootstrap = Bootstrap(app)
 
 momnet = Moment(app)
 
+babel = Babel(app)
+
+@babel.localeselector
+def get_locale():
+    #return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return 'es'
+
 from app import routes, models, errors
+
