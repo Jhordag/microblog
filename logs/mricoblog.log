@@ -129,3 +129,4 @@ Traceback (most recent call last):
   File "C:\Users\gabri\Desktop\Microblog\app\templates\login.html", line 5, in template
     <h1>{{_(Sign In)}}</h1>
 jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'In'
+Microblog startup
