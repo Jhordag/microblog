@@ -1,4 +1,25 @@
-Exception on /user/gabrieljhordan [GET]
+Exception on /reset_password_request [POST]
+Traceback (most recent call last):
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 872, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 451, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -8,91 +29,48 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 82, in user
-    return render_template('user.html',user=user, posts=posts, form=form)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\gabri\Desktop\Microblog\app\templates\user.html", line 42, in template
-    {% endblock %}
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endif'. The innermost block that needs to be closed is 'if'.
-Exception on /user/gabrieljhordan [GET]
-Traceback (most recent call last):
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 82, in user
-    return render_template('user.html',user=user, posts=posts, form=form)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\gabri\Desktop\Microblog\app\templates\user.html", line 42, in template
-    {% endblock %}
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endif'. The innermost block that needs to be closed is 'if'.
-Exception on /user/gabrieljhordan [GET]
-Traceback (most recent call last):
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 82, in user
-    return render_template('user.html',user=user, posts=posts, form=form)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\jinja2\environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Users\gabri\Desktop\Microblog\app\templates\user.html", line 42, in template
-    {% endblock %}
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endblock'. You probably made a nesting mistake. Jinja is expecting this tag, but currently looking for 'endif'. The innermost block that needs to be closed is 'if'.
+  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 194, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\gabri\Desktop\Microblog\app\email.py", line 14, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "C:\Users\gabri\Desktop\Microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 1004, in quit
+    res = self.docmd("quit")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 431, in docmd
+    self.putcmd(cmd, args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
 Microblog startup
-Exception on /follow/gabrieljhordane [POST]
+Exception on /reset_password_request [POST]
+Traceback (most recent call last):
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 427, in send
+    connection.send(self)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 188, in send
+    self.host.sendmail(sanitize_address(envelope_from or message.sender),
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 872, in sendmail
+    self.ehlo_or_helo_if_needed()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 611, in ehlo_or_helo_if_needed
+    if not (200 <= self.ehlo()[0] <= 299):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 451, in ehlo
+    self.putcmd(self.ehlo_msg, name or self.local_hostname)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -102,12 +80,23 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask\app.py", line 1502, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 120, in follow
-    current_user.follow(username)
-  File "C:\Users\gabri\Desktop\Microblog\app\models.py", line 45, in follow
-    if not self.is_following(user):
-  File "C:\Users\gabri\Desktop\Microblog\app\models.py", line 53, in is_following
-    return self.followed.filter(followers.c.followed_id== user.id).count() >0
-AttributeError: 'str' object has no attribute 'id'
+  File "C:\Users\gabri\Desktop\Microblog\app\routes.py", line 194, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\gabri\Desktop\Microblog\app\email.py", line 14, in send_password_reset_email
+    send_email('[Microblog] Reset Your Password',
+  File "C:\Users\gabri\Desktop\Microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 492, in send
+    message.send(connection)
+  File "C:\Users\gabri\Desktop\Microblog\venv\lib\site-packages\flask_mail.py", line 152, in __exit__
+    self.host.quit()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 1004, in quit
+    res = self.docmd("quit")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 431, in docmd
+    self.putcmd(cmd, args)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 378, in putcmd
+    self.send(f'{s}{CRLF}')
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.9_3.9.2800.0_x64__qbz5n2kfra8p0\lib\smtplib.py", line 365, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+Microblog startup
