@@ -11,6 +11,8 @@ class Config(object):
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = os.environ.get('MAIL_PORT')
     MAIL_USE_TLS = os.environ.get('MAIL_USE_T') is not None
