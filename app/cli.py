@@ -1,4 +1,3 @@
-from app import app
 import click
 import os
 
