@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-02-06 20:15-0300\n"
+"POT-Creation-Date: 2022-02-06 22:13-0300\n"
 "PO-Revision-Date: 2022-02-02 21:20-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.1\n"
 
-#: app/__init__.py:20
+#: app/__init__.py:22
 msgid "Please log in to access this page."
 msgstr "Por favor ingrese para acceder a esta página."
 
@@ -155,12 +155,20 @@ msgstr ""
 msgid "You are not following %(username)s."
 msgstr ""
 
-#: app/main/routes.py:189
+#: app/main/routes.py:190
 msgid "Your message has been sent."
 msgstr ""
 
-#: app/main/routes.py:191
+#: app/main/routes.py:192
 msgid "Send Message"
+msgstr ""
+
+#: app/main/routes.py:229
+msgid "An export task is currently in progress"
+msgstr ""
+
+#: app/main/routes.py:231
+msgid "Exporting posts..."
 msgstr ""
 
 #: app/templates/_post.html:17
@@ -180,15 +188,15 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:30 app/templates/messages.html:4
+#: app/templates/base.html:31 app/templates/messages.html:4
 msgid "Messages"
 msgstr ""
 
-#: app/templates/base.html:33
+#: app/templates/base.html:39
 msgid "Logout"
 msgstr ""
 
-#: app/templates/base.html:82
+#: app/templates/base.html:101
 msgid "Error: Could not contact server."
 msgstr ""
 
@@ -197,11 +205,11 @@ msgstr ""
 msgid "Hi, %(username)s!"
 msgstr ""
 
-#: app/templates/index.html:17 app/templates/user.html:43
+#: app/templates/index.html:17 app/templates/user.html:47
 msgid "Newer posts"
 msgstr ""
 
-#: app/templates/index.html:22 app/templates/user.html:48
+#: app/templates/index.html:22 app/templates/user.html:52
 msgid "Older posts"
 msgstr ""
 
@@ -234,7 +242,7 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: app/templates/user.html:10 app/templates/user_popup.html:11
+#: app/templates/user.html:11 app/templates/user_popup.html:11
 msgid "Last seen on"
 msgstr ""
 
@@ -248,16 +256,24 @@ msgstr ""
 msgid "%(count)d following"
 msgstr ""
 
-#: app/templates/user.html:31
-msgid "Send private message"
+#: app/templates/user.html:15
+msgid "Edit your profile"
 msgstr ""
 
-#: app/templates/user_popup.html:23
+#: app/templates/user.html:17
+msgid "Export your posts"
+msgstr ""
+
+#: app/templates/user.html:23 app/templates/user_popup.html:23
 msgid "Follow"
 msgstr ""
 
-#: app/templates/user_popup.html:32
+#: app/templates/user.html:30 app/templates/user_popup.html:32
 msgid "Unfollow"
+msgstr ""
+
+#: app/templates/user.html:35
+msgid "Send private message"
 msgstr ""
 
 #: app/templates/auth/login.html:12
